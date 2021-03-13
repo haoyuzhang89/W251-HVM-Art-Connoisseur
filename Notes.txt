@@ -1,0 +1,5 @@
+Using g4dn.xlarge for testing because it's cheap
+Using Ubuntu 18.04 Deep Learning AMI
+
+source activate tensorflow2_p36
+jupyter notebook --ip=0.0.0.0 --no-browser
