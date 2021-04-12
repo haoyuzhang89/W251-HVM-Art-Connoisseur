@@ -48,7 +48,7 @@ MobileNet is a lightweight deep neural network. It has fewer parameters and high
 After selecting the ResNet50 and MobileNet, we tuned parameters for those two frameworks. Each training took us about 3~5 hours. The "Image size" column in the following table shows the size of the input images. For instance, if the image size is "64", it means the imgae size is 64 * 64. The sampling size means how many parts of the input image is sampled into the training model. "Model" indicates that the training model is MobilNet or ResNet50. "Resize Or Reshape" describes the preprocessing of the origin images. "Epoch" is the epoch of the training model. "Dropout Rate" indicates the percentage of data points are dropped out from the inputs. "L2" is the shrink weights for L2 regularisation. The rest of the columns are the accuracies from different training or testing stages or metrics. Here is a summary table of the settings and results:
 
 Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate | L2 | Training Accuracy | Top5 Training Accuracy | Validation Accuracy | Top5 Validation Accuracy | Test Accuracy | Top5 Test Accuracy
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+--- | --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
 64 | 16 | MobileNet | Resize | 100 | 0.7 | Null | 0.7563 |	0.9563 | 0.2416 |	0.5579 | 0.2614 | 0.5738
 64 | 16 | MobileNet | Resize | 100 | 0.7 | 0.001 | 0.7563 | 0.9563 | 0.2416 | 0.5579 |	0.2416 | 0.5579
 64 | 16 | MobileNet | Resize | 100 | 0.9 | 0.0001 | 0.7429 |	0.9394 | 0.2459 |	0.5457 | 0.2459 | 0.5457
