@@ -18,8 +18,8 @@ Our dataset is a Kaggle dataset available at https://www.kaggle.com/ikarus777/be
 ## Preprocess Dataset
 
 * We corrected some special characters of the artist names to standard charaters, so our model can read the names.
-* We convert the dataset to 3 RGB channels by "/255" to the original pixels.
-* We splitted the dataset by 80% of training data, 10% of dev data and 10% of test data.
+* We converted the dataset to 3 RGB channels by "/255" to the original pixels.
+* We split the dataset into 80%  training data, 10% dev data and 10% test data.
 * Besides the above modifications, we also created two new datasets from the raw dataset. In the first type of dataset, we sampled the cropped images. We cropped the images with the sizes of 256 * 256, 128 * 128, and 64 * 64. And fed same sizes of images to the model for training. Here are some examples of the croped images for random sampling.
   ![image](https://user-images.githubusercontent.com/59550524/114339653-8f3c3d00-9b0a-11eb-881d-aad6af7783df.png)
 * The other dataset generated from the raw dataset is the reshaping dataset. We reshaped the whole images to the same sizes. And fed those reshaped images to the training model.
@@ -76,8 +76,8 @@ After training the models, we decided to use Resnet-50 as the architecture for o
 
 ## Difficulties
 
-* We fit the overfiting issue when we were training the data. (?????????examples??? plots????????????) From the plots, we can see that when the loss functions of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. Thus, from the plots below (??????plots??????), the loss function of the validation model decreases as well.
-* We also hit large scale of data issues. The model kept crashing when the training data are too large, so we choose simple models. Thus, the model includes much fewer parameters. Then, the models like MobileNet can train on the complex input data.
+* We ran into overfitting when we were training the data. (?????????examples??? plots????????????) From the plots, we can see that as the loss function of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. Thus, from the plots below (??????plots??????), the loss function of the validation model decreases as well.
+* We also hit large scale of data issues. The model kept crashing when the training data was too large. We attempted to fix this by trying out reduced image sizes. One solution we considered was to have the training data read in batches from the hard drive instead of holding all the training data in memory, but we didn't get around to implementing this solution.
 
 
 ## Future Opportunities
