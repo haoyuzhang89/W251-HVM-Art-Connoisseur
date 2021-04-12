@@ -10,11 +10,14 @@ Different artists have various painting styles. The goal of our project is to id
 
 ## Raw Dataset
 
-Our dataset is a Kaggle dataset available at https://www.kaggle.com/ikarus777/best-artworks-of-all-time. This dataset includes images with artist names as file names and a csv file which has artist names and the properties of the images. We also correct some special characters of the artist names to standard charaters. The dataset contains labeled images from 50 prominent artists which we will divide into a training and test set for our training.
+Our dataset is a Kaggle dataset available at https://www.kaggle.com/ikarus777/best-artworks-of-all-time. The dataset contains labeled images from 50 prominent artists which we will divide into a training and test set for our training. And the data folder also has a csv file with properties of the images.
 
 ## Preprocess Dataset
 
-## Equipment / Data pipeline
+* We corrected some special characters of the artist names to standard charaters, so our model can read the names.
+* We 
+
+## Infrastructure
 
 We are using a g4dn.2xlarge instance from AWS to train our neural network. The AMI we are using is "Deep Learning AMI (Ubuntu 18.04) Version 42.1." We use the preinstalled tensorflow option in this AMI and use a Jupyter notebook to conduct our training.
 
