@@ -29,13 +29,14 @@ We are using a g4dn.2xlarge instance from AWS to train our neural network. The A
 ## Model Frameworks
 
 After researching and experimenting Kera models, we chose to do further training on the ResNet50 and MobileNet architecture. As the available model table shows below, both ResNet50 and MobileNet have model size small enough for us to train meanwhile they have descent accuracy.
-![image](https://user-images.githubusercontent.com/59550524/114341921-b8ab9780-9b0f-11eb-91a5-363e1b43ecc3.png)
+![image](https://user-images.githubusercontent.com/59550524/114341921-b8ab9780-9b0f-11eb-91a5-363e1b43ecc3.png)[1]
 
-ResNet50 is a variant of ResNet(Residual Network) model which is a deep convolutional neural network. "Several layers are stacked and are trained to the task at hand."[2] And at the end of its layers, ResNet learns residual. Residual is subtraction of feature learned from input of that layer. ResNet50 has 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer.
+ResNet50 is a variant of ResNet(Residual Network) model which is a deep convolutional neural network. "Several layers are stacked and are trained to the task at hand."[2] And at the end of its layers, ResNet learns residual. Residual is subtraction of feature learned from input of that layer. ResNet50 has 50 Convolution layers along with 1 MaxPool and 1 Average Pool layer.
+![image](https://user-images.githubusercontent.com/59550524/114344907-9288f600-9b15-11eb-9dab-533728415455.png)[4]
 
-MobileNet is a lightweight deep neural network. It has fewer parameters and higher classification accuracy. 
 
-
+MobileNet is a lightweight deep neural network. It has fewer parameters and higher classification accuracy. "MobileNet is a streamlined architecture that uses depthwise separable convolutions to construct lightweight deep convolutional neural network."[3]
+![image](https://user-images.githubusercontent.com/59550524/114344151-28238600-9b14-11eb-9c40-07f4d8becb9a.png)[3]
 
 
 
@@ -68,4 +69,7 @@ After researching, we picked Resnet-50
 
 [2] https://iq.opengenus.org/resnet50-architecture/#:~:text=ResNet50%20is%20a%20variant%20of,explored%20ResNet50%20architecture%20in%20depth.
 
+[3] https://www.hindawi.com/journals/misy/2020/7602384/
+
+[4] https://link.springer.com/article/10.1007/s00330-019-06318-1
 
