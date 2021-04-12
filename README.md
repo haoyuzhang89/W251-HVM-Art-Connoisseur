@@ -56,7 +56,7 @@ Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate |
 128 | 4 | MobileNet | Resize | 100 | 0.7 | 0.0001 | 0.8915 |	0.9896 | 0.2264	| 0.5297 | 0.2264 | 0.5297
 128 | 4 | ResNet50 | Resize | 100 | 0.7 | 0.0001 |  |  |  |  |  | 
 256 | 1 | MobileNet | Resize | 100 | 0.7 | 0.0001 |  |  |  |  |  | 
-256 | 1 | MobileNet | Reshape | 100 | 0.7 | 0.0001 | 0.0001 |	0.9768 | 0.9997 |	0.3598 | 0.6521 | 0.3598 | 0.6521 
+256 | 1 | MobileNet | Reshape | 100 | 0.7 | 0.0001 |	0.9768 | 0.9997 |	0.3598 | 0.6521 | 0.3598 | 0.6521 
 256 | 1 | ResNet50 | Resize | 100 | 0.9 | 0.01 | 0.8874 | 0.9885 | 0.1669 | 0.4355 | 0.1669 | 0.4355
 256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.01 | 0.9232 | 0.9963	| 0.3041 | 0.6012 | 0.3041 | 0.6012
 
@@ -78,11 +78,13 @@ After training the models, we decided to use Resnet-50 as the architecture for o
 
 * We ran into overfitting when we were training the data. (?????????examples??? plots????????????) From the plots, we can see that as the loss function of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. Thus, from the plots below (??????plots??????), the loss function of the validation model decreases as well.
 * We also hit large scale of data issues. The model kept crashing when the training data was too large. We attempted to fix this by trying out reduced image sizes. One solution we considered was to have the training data read in batches from the hard drive instead of holding all the training data in memory, but we didn't get around to implementing this solution.
+* There is also a highly uneven distribution of artworks per artist. Some artists have many samples to throw into the network, but others have very few. The lowest number of paintings available for training a particular artist is 24.
 
 
-## Future Opportunities
+## Future Wishlist
 
 * If we have more time and more training resources, we would like to do more training and testing with gray scales and compare the result with colorful images.
+* An analysis of scores besides accuracy is probably necessary since it's likely that only a few classes are trained well.
 
 
 ## Reference
