@@ -45,24 +45,30 @@ MobileNet is a lightweight deep neural network. It has fewer parameters and high
 
 ## Model Training
 
-After selecting the ResNet50 and MobileNet, we tuned parameters for those two frameworks. 
-Image Size | Arguments | Model | Epoch | Dropout Rate | L2 | Training Accuracy | Top5 Training Accuracy | Validation Accuracy | Top5 Validation Accuracy | Test Accuracy | Top5 Test Accuracy
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-64 | 16 | MobileNet | 100 | 0.7 | Null | 0.7563 |	0.9563 | 0.2416 |	0.5579 | 0.2614 | 0.5738
-64 | 16 | MobileNet | 100 | 0.7 | 0.001 | 0.7563 | 0.9563 | 0.2416 | 0.5579 |	0.2416 | 0.5579
-64 | 16 | MobileNet | 100 | 0.9 | 0.0001 | 0.7429 |	0.9394 | 0.2459 |	0.5457 | 0.2459 | 0.5457
-64 | 16 | ResNet50 | 100 | 0.9 | 0.0001 | 0.8548 | 0.9723 |	0.3157 | 0.6402 |	0.3157 | 0.6402
-128 | 4 | MobileNet | 100 | 0.7 | 0.0001 | 0.8915 |	0.9896 | 0.2264	| 0.5297 | 0.2264 | 0.5297
-128 | 4 | ResNet50 | 100 | 0.7 | 0.0001 |  |  |  |  |  | 
-256 | 1 | MobileNet | 100 | 0.7 | 0.0001 |  |  |  |  |  | 
-256 | 1 | MobileNet | 100 | 0.7 | 0.0001 | 0.0001 |	0.9768 | 0.9997 |	0.3598 | 0.6521 | 0.3598 | 0.6521 
-256 | 1 | ResNet50 | 100 | 0.9 | 0.01 | 0.8874 | 0.9885 | 0.1669 | 0.4355 | 0.1669 | 0.4355
-256 | 1 | ResNet50 | 100 | 0.9 | 0.01 | 0.9232 | 0.9963	| 0.3041 | 0.6012 | 0.3041 | 0.6012
+After selecting the ResNet50 and MobileNet, we tuned parameters for those two frameworks. Each training took us about 3~5 hours. The "Image size" column in the following table shows the size of the input images. For instance, if the image size is "64", it means the imgae size is 64 * 64. The sampling size means how many parts of the input image is sampled into the training model. "Model" indicates that the training model is MobilNet or ResNet50. "Resize Or Reshape" describes the preprocessing of the origin images. "Epoch" is the epoch of the training model. "Dropout Rate" indicates the percentage of data points are dropped out from the inputs. "L2" is the shrink weights for L2 regularisation. The rest of the columns are the accuracies from different training or testing stages or metrics. Here is a summary table of the settings and results:
 
+Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate | L2 | Training Accuracy | Top5 Training Accuracy | Validation Accuracy | Top5 Validation Accuracy | Test Accuracy | Top5 Test Accuracy
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+64 | 16 | MobileNet | Resize | 100 | 0.7 | Null | 0.7563 |	0.9563 | 0.2416 |	0.5579 | 0.2614 | 0.5738
+64 | 16 | MobileNet | Resize | 100 | 0.7 | 0.001 | 0.7563 | 0.9563 | 0.2416 | 0.5579 |	0.2416 | 0.5579
+64 | 16 | MobileNet | Resize | 100 | 0.9 | 0.0001 | 0.7429 |	0.9394 | 0.2459 |	0.5457 | 0.2459 | 0.5457
+64 | 16 | ResNet50 | Resize | 100 | 0.9 | 0.0001 | 0.8548 | 0.9723 |	0.3157 | 0.6402 |	0.3157 | 0.6402
+128 | 4 | MobileNet | Resize | 100 | 0.7 | 0.0001 | 0.8915 |	0.9896 | 0.2264	| 0.5297 | 0.2264 | 0.5297
+128 | 4 | ResNet50 | Resize | 100 | 0.7 | 0.0001 |  |  |  |  |  | 
+256 | 1 | MobileNet | Resize | 100 | 0.7 | 0.0001 |  |  |  |  |  | 
+256 | 1 | MobileNet | Reshape | 100 | 0.7 | 0.0001 | 0.0001 |	0.9768 | 0.9997 |	0.3598 | 0.6521 | 0.3598 | 0.6521 
+256 | 1 | ResNet50 | Resize | 100 | 0.9 | 0.01 | 0.8874 | 0.9885 | 0.1669 | 0.4355 | 0.1669 | 0.4355
+256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.01 | 0.9232 | 0.9963	| 0.3041 | 0.6012 | 0.3041 | 0.6012
+
+
+(????????????file names in the table train_data train_data_reshape train_data_age4 16???????????????????)
 
 ## Model Results
 
-After looking at a few models, we decided to use Resnet-50 as the architecture for our image recognition model. There are a few good reasons to try Resnet in our work:
+???????
+(what are final results? conclusion?? plots(only includes the plots for best models)???)
+
+After training the models, we decided to use Resnet-50 as the architecture for our image recognition model. There are a few good reasons to try Resnet in our work:
 * Resnet has achieved incredible accuracy due to its clever workaround to reduce the occurence of vanishing gradients when adding more layers to the neural network. This enables neural networks that implement this workaround to have many more layers than most others. 
 * The model is readily available via Keras
 * The training time seems acceptable on our machine for this model
@@ -70,14 +76,13 @@ After looking at a few models, we decided to use Resnet-50 as the architecture f
 
 ## Difficulties
 
-[Overfitting]
-* L2
-[Large scale of data: resize from 256 to 128]
+* We fit the overfiting issue when we were training the data. (?????????examples??? plots????????????) From the plots, we can see that when the loss functions of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. Thus, from the plots below (??????plots??????), the loss function of the validation model decreases as well.
+* We also hit large scale of data issues. The model kept crashing when the training data are too large, so we choose simple models. Thus, the model includes much fewer parameters. Then, the models like MobileNet can train on the complex input data.
 
 
 ## Future Opportunities
 
-* If we have more time and more training resources. We hope to train data with gray scales and compare the result with colorful images.
+* If we have more time and more training resources, we would like to do more training and testing with gray scales and compare the result with colorful images.
 
 
 ## Reference
