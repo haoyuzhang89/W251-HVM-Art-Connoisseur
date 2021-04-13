@@ -61,18 +61,15 @@ Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate |
 256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.01 | 0.9232 | 0.9963	| 0.3041 | 0.6012 | 0.3041 | 0.6012
 
 
-(????????????file names in the table train_data train_data_reshape train_data_age4 16???????????????????)
+
 
 ## Model Results
 
+Here is the table of details about the top three models we acquired in this project. 
 
-???????
-(what are final results? conclusion?? plots(only includes the plots for best models)???)
+< table >
 
-After training the models, we decided to use Resnet-50 as the architecture for our image recognition model. There are a few good reasons to try Resnet in our work:
-* Resnet has achieved incredible accuracy due to its clever workaround to reduce the occurence of vanishing gradients when adding more layers to the neural network. This enables neural networks that implement this workaround to have many more layers than most others. 
-* The model is readily available via Keras
-* The training time seems acceptable on our machine for this model
+After training the models, we decided to use Resnet-50 and MobileNet as the architectures for our image recognition model. 
 
 Overall, it seems like the reshaped data performs better than the cropped data. Interestingly, we got our best results out of MobileNet reshaped data with a 36% top 1 test accuracy and a 65% top 5 test accuracy
 
@@ -81,7 +78,9 @@ Overall, it seems like the reshaped data performs better than the cropped data. 
 
 ## Difficulties
 
-* We ran into overfitting when we were training the data. (?????????examples??? plots????????????) From the plots, we can see that as the loss function of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. Thus, from the plots below (??????plots??????), the loss function of the validation model decreases as well.
+< plots of 3 best training history > 
+
+* We ran into overfitting when we were training the data. From the plots, we can see that as the loss function of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. After tuning hyperparameters (dropout rate) and introducing regularization (l2), this problem couldn’t be totally resolved with acquiring a reasonable accuracy at the same time. 
 * We also hit large scale of data issues. The model kept crashing when the training data was too large. We attempted to fix this by trying out reduced image sizes. One solution we considered was to have the training data read in batches from the hard drive instead of holding all the training data in memory, but we didn't get around to implementing this solution.
 * There is also a highly uneven distribution of artworks per artist. Some artists have many samples to throw into the network, but others have very few. The lowest number of paintings available for training a particular artist is 24.
 
