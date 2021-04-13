@@ -81,7 +81,7 @@ The plots of ModelB:
 ![image](https://user-images.githubusercontent.com/59550524/114500615-3db0b280-9bdd-11eb-96af-d3836e019534.png)
 
 The plots of ModelC:
-![image](https://user-images.githubusercontent.com/59550524/114501295-916fcb80-9bde-11eb-921c-5215b33e9078.png)
+![image](https://user-images.githubusercontent.com/59550524/114501409-cb40d200-9bde-11eb-977f-645392e16ab9.png)
 
 Overall, it seems like the reshaped data performs better than the cropped data. Interestingly, we got our best results out of MobileNet reshaped data with a 36% top 1 test accuracy and a 65% top 5 test accuracy.
 
