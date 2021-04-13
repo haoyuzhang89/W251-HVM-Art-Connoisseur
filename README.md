@@ -123,9 +123,8 @@ Following are some model prediction examples,
 [Data Preprocessing - Image Reshape](Sampling_Reshaping.ipynb)\
 [Data Preorocessing - Random Sampling](Sampling_Cropping.ipynb)\
 [Model Training](Model_Training.ipynb)\
-[Prediction Example](Model Demo.ipynb)\
-[Presentation](Artist Recognition via Keras.pdf
-)\
+[Prediction Example](Model_Demo.ipynb)\
+[Presentation](Artist Recognition via Keras.pdf)\
 [List of Artists](artists.csv)
 
 
