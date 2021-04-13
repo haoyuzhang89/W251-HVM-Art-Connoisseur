@@ -105,6 +105,10 @@ Following are some model prediction examples,
   <img width="460"  src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model2c/manet2c.png">
 </p>
 
+* Forgery of Vincent Von Gogh
+<p align="center">
+  <img width="460"  src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model2c/art_forgery2c.png">
+</p>
 
 
 ## Difficulties
