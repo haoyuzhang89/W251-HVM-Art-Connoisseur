@@ -65,6 +65,7 @@ Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate |
 
 ## Model Results
 
+
 ???????
 (what are final results? conclusion?? plots(only includes the plots for best models)???)
 
