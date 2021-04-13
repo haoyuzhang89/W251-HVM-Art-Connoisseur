@@ -74,6 +74,8 @@ After training the models, we decided to use Resnet-50 as the architecture for o
 * The model is readily available via Keras
 * The training time seems acceptable on our machine for this model
 
+Overall, it seems like the reshaped data performs better than the cropped data. Interestingly, we got our best results out of MobileNet reshaped data with a 36% top 1 test accuracy and a 65% top 5 test accuracy
+
 
 
 
