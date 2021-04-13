@@ -118,6 +118,20 @@ Following are some model prediction examples,
 * There is also a highly uneven distribution of artworks per artist. Some artists have many samples to throw into the network, but others have very few. The lowest number of paintings available for training a particular artist is 24.
 
 
+## Link to Notebook
+
+[Data Preprocessing - Image Reshape](Sampling_Reshaping.ipynb)\
+[Data Preorocessing - Random Sampling](Sampling_Cropping.ipynb)\
+[Model Training](Model_Training.ipynb)\
+[Prediction Example](Model Demo.ipynb)\
+[Presentation](Artist Recognition via Keras.pdf
+)\
+[List of Artists](artists.csv)
+
+
+
+
+
 ## Future Wishlist
 
 * If we have more time and more training resources, we would like to do more training and testing with gray scales and compare the result with colorful images.
