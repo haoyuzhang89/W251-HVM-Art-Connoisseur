@@ -75,6 +75,8 @@ After training the models, we decided to use Resnet-50 as the architecture for o
 * The training time seems acceptable on our machine for this model
 
 
+
+
 ## Difficulties
 
 * We ran into overfitting when we were training the data. (?????????examples??? plots????????????) From the plots, we can see that as the loss function of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. Thus, from the plots below (??????plots??????), the loss function of the validation model decreases as well.
