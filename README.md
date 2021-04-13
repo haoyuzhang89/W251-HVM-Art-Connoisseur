@@ -88,9 +88,23 @@ Overall, it seems like the reshaped data performs better than the cropped data. 
 Following are some model prediction examples,
 
 * Andy Warhol:
+
 <p align="center">
-  <src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model2c/warhol2c.png">
+  <img width="460" height="300" src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model2c/warhol2c.png">
 </p>
+
+* Claude Monet
+
+<p align="center">
+  <img width="383" height="460" src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model4b/monet4b.png">
+</p>
+
+* Édouard Manet
+
+<p align="center">
+  <img width="460"  src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model2c/manet2c.png">
+</p>
+
 
 
 ## Difficulties
