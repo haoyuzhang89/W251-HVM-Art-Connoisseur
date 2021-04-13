@@ -119,7 +119,7 @@ Following are some model prediction examples,
 
 
 
-## Link to Files
+## Links to Files
 
 [Data Preprocessing - Image Reshape](Sampling_Reshaping.ipynb)\
 [Data Preorocessing - Random Sampling](Sampling_Cropping.ipynb)\
