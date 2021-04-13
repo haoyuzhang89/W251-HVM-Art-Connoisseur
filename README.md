@@ -49,6 +49,19 @@ After selecting the ResNet50 and MobileNet, we tuned parameters for those two fr
 
 Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate | L2 | Training Accuracy | Top5 Training Accuracy | Validation Accuracy | Top5 Validation Accuracy | Test Accuracy | Top5 Test Accuracy
 --- | --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+64 | 16 | ResNet50 | Resize | 100 | 0.9 | 0.0001 | 0.8548 | 0.9723 |	0.3157 | 0.6402 |	0.3157 | 0.6402
+256 | 1 | MobileNet | Reshape | 100 | 0.7 | 0.0001 | 0.9768 | 0.9997 |	0.3598 | 0.6521 | 0.3598 | 0.6521
+256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.0001 | 0.9642 | 0.9984 | 0.3432 | 0.6675 | 0.3432 | 0.6675
+
+
+
+
+## Model Results
+
+Here is the table of details about the top three models we acquired in this project. 
+
+Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate | L2 | Training Accuracy | Top5 Training Accuracy | Validation Accuracy | Top5 Validation Accuracy | Test Accuracy | Top5 Test Accuracy
+--- | --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
 64 | 16 | MobileNet | Resize | 100 | 0.7 | Null | 0.7563 |	0.9563 | 0.2416 |	0.5579 | 0.2614 | 0.5738
 64 | 16 | MobileNet | Resize | 100 | 0.7 | 0.001 | 0.7563 | 0.9563 | 0.2416 | 0.5579 |	0.2416 | 0.5579
 64 | 16 | MobileNet | Resize | 100 | 0.9 | 0.0001 | 0.7429 |	0.9394 | 0.2459 |	0.5457 | 0.2459 | 0.5457
@@ -60,15 +73,6 @@ Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate |
 256 | 1 | ResNet50 | Resize | 100 | 0.9 | 0.01 | 0.8874 | 0.9885 | 0.1669 | 0.4355 | 0.1669 | 0.4355
 256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.01 | 0.9232 | 0.9963	| 0.3041 | 0.6012 | 0.3041 | 0.6012
 256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.0001 | 0.9642 | 0.9984 | 0.3432 | 0.6675 | 0.3432 | 0.6675
-
-
-
-
-## Model Results
-
-Here is the table of details about the top three models we acquired in this project. 
-
-< table >
 
 After training the models, we decided to use Resnet-50 and MobileNet as the architectures for our image recognition model. 
 
