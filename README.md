@@ -85,6 +85,13 @@ The plots of ModelC:
 
 Overall, it seems like the reshaped data performs better than the cropped data. Interestingly, we got our best results out of MobileNet reshaped data with a 36% top 1 test accuracy and a 65% top 5 test accuracy.
 
+Following are some model prediction examples,
+
+* Andy Warhol:
+<p align="center">
+  <src="https://github.com/pakim249CAL/W251-FinalProject/blob/master/demo/model2c/warhol2c.png">
+</p>
+
 
 ## Difficulties
 
