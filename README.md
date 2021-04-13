@@ -88,9 +88,7 @@ Overall, it seems like the reshaped data performs better than the cropped data. 
 
 ## Difficulties
 
-< plots of 3 best training history > 
-
-* We ran into overfitting when we were training the data. From the plots, we can see that as the loss function of the training model decreases, the loss function of the validation model stays the same. Then, we introduce the dropout parameter and L2 regularisation. After tuning hyperparameters (dropout rate) and introducing regularization (l2), this problem couldn’t be totally resolved with acquiring a reasonable accuracy at the same time. 
+* We ran into overfitting when we were training the data. When loss function of the training model went down, the loss function of the validation model went up a lot. So, we introduced the dropout parameter and L2 regularisation. After tuning hyperparameters (dropout rate) and introducing regularization (l2), although this problem couldn’t be totally resolved with acquiring a reasonable accuracy at the same time, the overfitting issues are not as bad as before for most of the models. 
 * We also hit large scale of data issues. The model kept crashing when the training data was too large. We attempted to fix this by trying out reduced image sizes. One solution we considered was to have the training data read in batches from the hard drive instead of holding all the training data in memory, but we didn't get around to implementing this solution.
 * There is also a highly uneven distribution of artworks per artist. Some artists have many samples to throw into the network, but others have very few. The lowest number of paintings available for training a particular artist is 24.
 
