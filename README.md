@@ -128,7 +128,7 @@ Following are some model prediction examples,
 [Model Training](notebook/Model_Training.ipynb)\
 [Prediction Example](notebook/Model_Demo.ipynb)\
 [Presentation](Artist%Recognition%via%Keras.pdf)\
-[List of Artists](artists.csv)
+[List of Artists](data/artists.csv)
 
 
 
