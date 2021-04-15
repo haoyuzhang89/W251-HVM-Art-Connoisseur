@@ -61,6 +61,8 @@ Image Size | Sampling Sizes | Model | Resize Or Reshape | Epoch | Dropout Rate |
 256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.01 | 0.9232 | 0.9963	| 0.3041 | 0.6012 | 0.3041 | 0.6012
 256 | 1 | ResNet50 | Reshape | 100 | 0.9 | 0.0001 | 0.9642 | 0.9984 | 0.3432 | 0.6675 | 0.3432 | 0.6675
 
+[List of Models](https://docs.google.com/spreadsheets/d/1Ir5qoyuMk_q0jZAVQH9oZwBwN4xIubUE_Q9mRC98wkw/edit?usp=drive_web&ouid=114156559247507072009)
+[Trained Models](https://drive.google.com/drive/u/0/folders/1gsCOO5AH9wyVg_riRg13A3peMyTavzVe)
 
 
 ## Model Results
@@ -121,10 +123,10 @@ Following are some model prediction examples,
 
 ## Links to Files
 
-[Data Preprocessing - Image Reshape](Sampling_Reshaping.ipynb)\
-[Data Preorocessing - Random Sampling](Sampling_Cropping.ipynb)\
-[Model Training](Model_Training.ipynb)\
-[Prediction Example](Model_Demo.ipynb)\
+[Data Preprocessing - Image Reshape](notebook/Sampling_Reshaping.ipynb)\
+[Data Preorocessing - Random Sampling](notebook/Sampling_Cropping.ipynb)\
+[Model Training](notebook/Model_Training.ipynb)\
+[Prediction Example](notebook/Model_Demo.ipynb)\
 [Presentation](Artist%Recognition%via%Keras.pdf)\
 [List of Artists](artists.csv)
 
